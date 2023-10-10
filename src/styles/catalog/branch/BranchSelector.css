@@ -1,0 +1,56 @@
+
+.branch-selector {
+    color: #409ed7;
+    cursor: pointer;
+}
+.branch-selector span {
+    border-bottom: 2px dashed #409ed7;
+}
+
+.modal-select-branch {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: auto;
+    max-width: 90vw;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 2px solid #409ed7;
+    border-radius: 8px;
+    box-shadow: 2px 2px 12px -3px #515151;
+    z-index: 2000;
+    padding: 10px;
+    padding-top: 60px;
+}
+
+.modal-select-branch > p {
+    border-bottom: 1px solid #409ed7;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.branch-list-wrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+    max-height: 60vh;
+}
+
+.branch-list {
+    /*position: absolute;*/
+    /*top: 60px;*/
+    /*left: 10px;*/
+    /*right: 10px;*/
+    /*bottom: 10px;*/
+}
+.branch-list-item {
+    cursor: pointer;
+}
+.branch-list-item:hover,
+.branch-list-item.active {
+    color: #409ed7;
+}

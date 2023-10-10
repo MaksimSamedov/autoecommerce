@@ -1,0 +1,85 @@
+#sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    height: 100vh;
+    transition: all .5s;
+    transform: translatex(-100%);
+    left: 0;
+    background-color: #fff;
+    border-right: 3px solid #0088cc;
+    padding: 10px;
+    z-index: 1000;
+    color: #0088cc;
+}
+
+#sidebar.open {
+    transform: none;
+}
+
+#sidebar + #content {
+    transition: all .5s;
+}
+
+#sidebar.open + #content::-webkit-scrollbar {
+    display: none;
+}
+#sidebar.open {
+    overflow: hidden;
+}
+#sidebar.open .sidebar-toggler {
+    transform: translate(-60%, -50%);
+    border-radius: 50%;
+    width: 50px;
+}
+@media only screen and (max-width: 560px){
+    #sidebar {
+        width: 100vw;
+    }
+}
+@media only screen and (min-width: 560px){
+    #sidebar.open + #content {
+        transform: translateX(150px);
+    }
+}
+
+/*.product-list-item {*/
+/*    transition: all .5s;*/
+/*}*/
+
+/*@media only screen and (min-width: 768px){*/
+/*    #sidebar.open + div .product-list-item {*/
+/*        width: 50%!important;*/
+/*    }*/
+/*}*/
+
+.sidebar-toggler {
+    position: absolute;
+    background-color: #0088cc;
+    color: #fff;
+    width: 20px;
+    height: 50px;
+    top: 50%;
+    left: 100%;
+    transition: .5s;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 0 15px 15px 0;
+}
+
+.sidebar-toggler i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+}
+
+#sidebar.open .sidebar-toggler i {
+    transform: translate(-160%, -50%) rotate(180deg);
+}
+
+#sidebar .menu-item span {
+
+}
